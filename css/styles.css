@@ -260,6 +260,8 @@ header {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social__icon:hover,
 .social__icon:focus {
@@ -306,6 +308,7 @@ header {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .all__clients__a:hover,
 .all__clients__a:focus {
@@ -324,11 +327,13 @@ footer {
   color: var(--letters_and_logo_color_white);
   font-size: 14px;
   line-height: 1.71;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__info {
   color: #999999;
   font-size: 14px;
   line-height: 1.71;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 address {
   font-style: normal;
@@ -377,6 +382,42 @@ address {
 .footer__a__style:hover {
   color: var(--link_and_button_color);
 }
+.news__login__text {
+  font-weight: 700;
+  color: var(--letters_and_logo_color_white);
+}
+.news__login__part {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+.news__login__input {
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  color: var(--letters_and_logo_color_white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: transparent;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  outline: transparent;
+}
+
+.news__login__button {
+  text-align: left;
+  padding: 10px 76px 10px 42px;
+}
+
+.news__login__svg {
+  position: absolute;
+  color: var(--letters_and_logo_color_white);
+  bottom: 13px;
+  right: 28px;
+  cursor: pointer;
+}
 
 /* ⬇ <<PORTFOLIO>> ⬇ */
 .title__button {
@@ -415,6 +456,9 @@ address {
   letter-spacing: 0.03em;
   font-family: inherit;
   padding: 6px 25px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .but__list > button:hover,
 .but__list > button:focus {
@@ -436,7 +480,7 @@ address {
 .portf__list__shadow {
   display: block;
   color: inherit;
-  transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portf__list__shadow:hover,
 .portf__list__shadow:focus {
@@ -510,7 +554,12 @@ address {
   transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
-  background-color: #fff;
+  background-color: var(--letters_and_logo_color_white);
+  box-shadow: 0px 2px 1px 0px;
+  box-shadow: 0px 1px 1px 0px;
+  box-shadow: 0px 1px 3px 0px;
+  border-radius: 4px;
+  padding: 40px;
 }
 .close-btn {
   position: absolute;
@@ -529,4 +578,87 @@ address {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+.login__form > p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--letters_and_logo_color_black);
+  margin-bottom: 2px;
+}
+.login__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--brand-color-dark-grey);
+  margin-top: 10px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login__label:hover,
+.login__label:focus {
+  fill: var(--link_and_button_color);
+}
+.login__input {
+  padding: 8px;
+  font-family: inherit;
+  margin-top: 4px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  color: var(--brand-color-grey);
+  outline: transparent;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login__input:focus,
+.login__input:hover {
+  border-color: var(--link_and_button_color);
+  outline: transparent;
+}
+.login__svg {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+}
+.login__svg:focus,
+.login__svg:hover {
+  color: var(--link_and_button_color);
+}
+.write__text {
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: transparent;
+  border-radius: 4px;
+  color: #757575;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+  margin-top: 4px;
+  padding: 12px 16px;
+}
+.write__text:focus,
+.write__text:hover {
+  border-color: var(--link_and_button_color);
+}
+.to__choose {
+  margin: 0 auto;
+  position: relative;
+}
+.send__button {
+  margin-top: 30px;
+  padding: 10px 76px;
+}
+.regulation {
+  color: var(--link_and_button_color);
+  text-decoration: underline;
 }
